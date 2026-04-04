@@ -1,7 +1,3 @@
----
-
-### **TODO**
-
 # Python Learning & Project Roadmap
 
 ## Phase 1: Core Syntax Crash Course
