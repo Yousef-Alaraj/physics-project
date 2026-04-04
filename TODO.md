@@ -1,9 +1,7 @@
 ---
 
-### **TODO.md**
-Copy and paste this into a file named `TODO.md`. GitHub will automatically render the `[ ]` as clickable checkboxes so you can track your progress.
+### **TODO**
 
-```markdown
 # Python Learning & Project Roadmap
 
 ## Phase 1: Core Syntax Crash Course
