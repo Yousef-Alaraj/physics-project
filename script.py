@@ -124,29 +124,29 @@ fig.canvas.mpl_connect('scroll_event', on_scroll)
 def update_plot():
     ax.clear()
     
-    # U, V = calculate_field(X, Y, charges)
-    # ax.quiver(X, Y, U, V, color='cornflowerblue', alpha=0.5, pivot='mid')
+    U, V = calculate_field(X, Y, charges)
+    ax.quiver(X, Y, U, V, color='cornflowerblue', alpha=0.5, pivot='mid')
     
-    # for c in charges:
-    #     color = 'red' if c["q"] > 0 else 'blue'
-    #     label = f"+{c['q']}" if c["q"] > 0 else f"{c['q']}"
-    #     # Make bigger charges look slightly bigger on screen
-    #     size = 300 + (abs(c["q"]) * 50) 
-    #     ax.scatter(c["x"], c["y"], color=color, s=size, zorder=5, edgecolors='black')
-    #     ax.text(c["x"], c["y"], label, color='white', weight='bold', 
-    #             ha='center', va='center', zorder=6)
+    for c in charges:
+        color = 'red' if c["q"] > 0 else 'blue'
+        label = f"+{c['q']}" if c["q"] > 0 else f"{c['q']}"
 
-    # ax.set_xlim(-LIMIT, LIMIT)
-    # ax.set_ylim(-LIMIT, LIMIT)
-    # ax.axhline(0, color='black', lw=0.5, alpha=0.3)
-    # ax.axvline(0, color='black', lw=0.5, alpha=0.3)
+        size = 300 + (abs(c["q"]) * 50) 
+        ax.scatter(c["x"], c["y"], color=color, s=size, zorder=5, edgecolors='black')
+        ax.text(c["x"], c["y"], label, color='white', weight='bold', 
+                ha='center', va='center', zorder=6)
+
+    ax.set_xlim(-LIMIT, LIMIT)
+    ax.set_ylim(-LIMIT, LIMIT)
+    ax.axhline(0, color='black', lw=0.5, alpha=0.3)
+    ax.axvline(0, color='black', lw=0.5, alpha=0.3)
     
-    # title = ("Interactive Electric Fields\n"
-    #          "[1-9] Drop specific charge | [Scroll] Edit charge size | [-] Flip Sign\n"
-    #          "[Backspace] Delete charge | [C] Clear All")
-    # ax.set_title(title, pad=15)
+    title = ("Interactive Electric Fields\n"
+             "[1-9] Drop specific charge | [Scroll] Edit charge size | [-] Flip Sign\n"
+             "[Backspace] Delete charge | [C] Clear All")
+    ax.set_title(title, pad=15)
     
-    # fig.canvas.draw_idle()
+    fig.canvas.draw_idle()
 
 update_plot()
 plt.show(block=True)
