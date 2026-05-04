@@ -1,0 +1,3 @@
+([('electric_field',
+   '/Users/yousef/Desktop/physics-project/dist/electric_field',
+   'EXECUTABLE')],)
