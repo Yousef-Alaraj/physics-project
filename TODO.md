@@ -18,8 +18,8 @@
 
 ## Phase 3: Project Execution
 *Objective: Build the actual Physics 2 assignment.*
-- [ ] Define the specific physics problem/scenario being modeled.
-- [ ] Write out the physics formulas required on paper first.
-- [ ] Create the core calculation engine in Python (using NumPy).
-- [ ] Build the output (either Matplotlib graphs or a VPython 3D scene).
-- [ ] Refactor and clean up the code for the final submission.
+- [x] Define the specific physics problem/scenario being modeled.
+- [x] Write out the physics formulas required on paper first.
+- [x] Create the core calculation engine in Python (using NumPy).
+- [x] Build the output (either Matplotlib graphs or a VPython 3D scene).
+- [x] Refactor and clean up the code for the final submission.
